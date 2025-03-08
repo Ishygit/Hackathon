@@ -1,0 +1,32 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body, html {
+   height: 100%;
+   width: 100%;
+}
+
+canvas {
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   display: block;
+}
+
+#colorPickerContainer {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 10;
+}
+
+#colorPicker {
+   margin-right: 10px;
+   padding: 10px;
+}
