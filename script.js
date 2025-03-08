@@ -50,3 +50,35 @@ randomColorButton.addEventListener("click", () => {
     colorPicker.value = randomColor; // Update the color picker to match the random color
     createColorSplash(randomColor);
 });
+
+
+// Create a new Pixi application
+const app = new PIXI.Application({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    backgroundColor: 0xffffff,
+    resolution: window.devicePixelRatio || 1,
+});
+
+document.body.appendChild(app.view);
+
+// Create a brush cursor effect
+const brush = new PIXI.Graphics();
+let currentColor = 0x000000;
+
+// Update brush position with mouse
+app.stage.interactive = true;
+app.stage.on('mousemove', (e) => {
+    const { x, y } = e.data.global;
+    brush.clear();
+    brush.beginFill(currentColor, 0.3);
+    brush.drawCircle(x, y, 20);
+    brush.endFill();
+});
+
+app.stage.addChild(brush);
+
+// Update color picker integration
+document.getElementById('colorPicker').addEventListener('input', (e) => {
+    currentColor = parseInt(e.target.value.replace('#', '0x'));
+});
