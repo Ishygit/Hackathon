@@ -157,6 +157,32 @@ canvas {
    100% { box-shadow: 0 5px 15px rgba(119, 0, 255, 0.3); }
 }
 
+.reset-btn {
+   padding: 12px 24px;
+   margin-left: 15px;
+   background: linear-gradient(135deg, #29e7de, #ff0000);
+   border: none;
+   border-radius: 25px;
+   color: white;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   text-transform: uppercase;
+   font-size: 14px;
+   letter-spacing: 1px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+   transform: translateY(-3px) scale(1.05);
+   box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+   background: linear-gradient(135deg, #ff0000, #2c19d6);
+}
+
+.reset-btn:active {
+   transform: translateY(-1px);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 /* Optional: Add Bootstrap classes to your button in HTML */
 .random-color-btn {
    /* Add these classes to your button element */

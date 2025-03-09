@@ -51,6 +51,18 @@ randomColorButton.addEventListener("click", () => {
     createColorSplash(randomColor);
 });
 
+const resetButton = document.getElementById("resetButton");
+
+resetButton.addEventListener("click", () => {
+    // Clear the canvas context
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // If using Pixi.js, also clear the stage
+    if (app) {
+        splashContainer.removeChildren();
+    }
+});
+
 
 // Create a new Pixi application
 const app = new PIXI.Application({
